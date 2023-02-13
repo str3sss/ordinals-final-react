@@ -1,8 +1,8 @@
-const api_url = 'https://api.ords.world/get_projects'
+const api_url = 'https://api.ords.world/get_projects?'
 
-async function getData() {
+async function getData(name) {
   try {
-    const response = await fetch(api_url, {
+    const response = await fetch(api_url + new URLSearchParams({name}), {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
@@ -19,5 +19,7 @@ async function getData() {
     return null
   }
 }
+
+
 
 export default getData

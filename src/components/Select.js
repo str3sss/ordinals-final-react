@@ -1,17 +1,20 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilter } from '../redux/ordersSlice';
 
 function SelectComp() {
   const [opened, setOpened] = useState(false)
-  const [value, setValue] = useState('7 Days')
-
-  function selectHandler(value) {
-    setValue(prev => value)
-    toggle()
-  }
+  const value = useSelector((state) => state.filter)
+  const dispatch = useDispatch()
 
   function toggle() {
     setOpened(prev => !prev)
+  }
+
+  function selectHandler(value) {
+    dispatch(setFilter(value))
+    toggle()
   }
 
   return (
