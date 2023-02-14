@@ -444,6 +444,10 @@ a {
   cursor: pointer;
 }
 
+.main__table thead tr td img {
+ margin-right: 5px;
+}
+
 .main__table thead tr td span {
   font-weight: 500;
   font-size: 16px;
@@ -462,7 +466,6 @@ a {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  gap: 3px;
 }
 
 .main__table thead tr td:nth-child(2) {

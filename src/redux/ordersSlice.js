@@ -6,7 +6,7 @@ export const orderSlice = createSlice({
     data: null,
     filter: '7 Days',
     search: '',
-    sorting: 'name',
+    sorting: 'id',
     sortReverse: false,
   },
   reducers: {
@@ -32,7 +32,7 @@ export const orderSlice = createSlice({
         if (state.sorting === 'twitter_users') state.data.sort((a, b) => b.twitter_subs - a.twitter_subs);
         if (state.sorting === 'discord_users') state.data.sort((a, b) => b.discord_subs - a.discord_subs);
         if (state.sorting === 'supply') state.data.sort((a, b) => b.supply - a.supply);
-        if (state.sorting === 'ords level')state.data.sort((a, b) => b.top_level - a.top_level);
+        if (state.sorting === 'top level')state.data.sort((a, b) => b.top_level - a.top_level);
         if (state.sorting === 'transfers')  state.data.sort((a, b) => b.transfers - a.transfers);
         if (state.sorting === 'floor')state.data.sort((a, b) => b.floor - a.floor);
       } else {
@@ -41,7 +41,7 @@ export const orderSlice = createSlice({
         if (state.sorting === 'twitter_users') state.data.sort((a, b) => a.twitter_subs - b.twitter_subs);
         if (state.sorting === 'discord_users') state.data.sort((a, b) => a.discord_subs - b.discord_subs);
         if (state.sorting === 'supply') state.data.sort((a, b) => a.supply - b.supply);
-        if (state.sorting === 'ords level')state.data.sort((a, b) => a.top_level - b.top_level);
+        if (state.sorting === 'top level')state.data.sort((a, b) => a.top_level - b.top_level);
         if (state.sorting === 'transfers')  state.data.sort((a, b) => a.transfers - b.transfers);
         if (state.sorting === 'floor')state.data.sort((a, b) => a.floor - b.floor);
       }

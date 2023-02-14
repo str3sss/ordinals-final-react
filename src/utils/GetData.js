@@ -1,4 +1,4 @@
-const api_url = 'https://api.ords.world/get_projects?'
+const api_url = 'https://api.top.world/get_projects?'
 
 async function getData(name) {
   try {

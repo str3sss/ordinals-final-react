@@ -11,7 +11,7 @@ function SortData(data, sort_by = 'id', reverse) {
         return data.sort((a, b) => b.discord_subs - a.discord_subs);
       case 'supply':
       return data.sort((a, b) => b.supply - a.supply);
-      case 'ords level':
+      case 'top level':
         return data.sort((a, b) => b.top_level - a.top_level);
       case 'transfers':
         return data.sort((a, b) => b.transfers - a.transfers);
@@ -32,7 +32,7 @@ function SortData(data, sort_by = 'id', reverse) {
         return data.sort((a, b) => a.discord_subs - b.discord_subs);
       case 'supply':
         return data.sort((a, b) => a.supply - b.supply);
-      case 'ords level':
+      case 'top level':
         return data.sort((a, b) => a.top_level - b.top_level);
       case 'transfers':
         return data.sort((a, b) => a.transfers - b.transfers);

@@ -62,7 +62,7 @@ function Table() {
                 <span>Supply</span>
               </td>
               <td>
-                <span>Ords lvls</span>
+                <span>top lvls</span>
               </td>
               <td>
                 <span>Transfers</span>
@@ -108,9 +108,9 @@ function Table() {
               {sort === 'supply' && <img width="10" height="10" src={arrUp} className={clsx(reverseSort && 'reverse-sort')} alt="" />}
               <span>Supply</span>
             </td>
-            <td onClick={() => sortHandler('ords level')}>
-              {sort === 'ords level' && <img width="10" height="10" src={arrUp} className={clsx(reverseSort && 'reverse-sort')} alt="" />}
-              <span>Ords lvls</span>
+            <td onClick={() => sortHandler('top level')}>
+              {sort === 'top level' && <img width="10" height="10" src={arrUp} className={clsx(reverseSort && 'reverse-sort')} alt="" />}
+              <span>Top level</span>
             </td>
             <td onClick={() => sortHandler('transfers')}>
               {sort === 'transfers' && <img width="10" height="10" src={arrUp} className={clsx(reverseSort && 'reverse-sort')} alt="" />}
